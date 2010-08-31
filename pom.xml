@@ -35,6 +35,7 @@
   <properties>
     <netbeans.hint.deploy.server>Tomcat60</netbeans.hint.deploy.server>
 	<jetty-port>8080</jetty-port>
+	<jetty-war-dir>${basedir}/target/webapp/</jetty-war-dir>
   </properties>
 
   <dependencies>
@@ -172,11 +173,21 @@
               <!-- When editing the conf files, you can comment this line to run
                     mvn jetty:run
                    to have a live web site
-                
-              <webAppSourceDirectory>${basedir}/target/webapp/</webAppSourceDirectory>-->
+                -->
+              <webAppSourceDirectory>${jetty-war-dir}</webAppSourceDirectory>
           </configuration>
       </plugin>
     </plugins>
   </build>
+
+  <profiles>
+	<profile>
+		<id>live</id>
+		<properties>
+			<jetty-war-dir>${basedir}/src/main/webapp/</jetty-war-dir>
+		</properties>
+	</profile>
+  </profiles>
+
 </project>
 

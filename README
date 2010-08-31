@@ -2,3 +2,8 @@ FuseSource Karaf Documentation
 
 To launch the documentation in a web app, run
   mvn jetty:run
+
+For the live web site (i.e. pages are rendered directly, 
+but not including generated pages such as commands help),
+run:
+  mvn jetty:run -Plive
