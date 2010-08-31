@@ -1,0 +1,4 @@
+FuseSource Karaf Documentation
+
+To launch the documentation in a web app, run
+  mvn jetty:run
