@@ -17,7 +17,7 @@
 -#
 
 -@ var body: String
--@ var title : String = "Scalate Sample"
+-@ var title : String = "FuseSource Karaf Doc"
 - response.setContentType("text/html")
 
 -# Only include the console if it's available and the engine is in dev mode.
@@ -55,16 +55,27 @@
     #navigation
       .wrapper
         %ul
-          - if (requestURI.startsWith("/index."))
+          - if (requestURI == "/")
             %li
               %span Home
           - else
             %li
               %a(href={uri("/")}) 
                 Home
-          %li
-            %a(href="/users-guide")
-              Users' Guide
+          - if (requestURI == "/users-guide/index")
+            %li
+              %span Users Guide
+          - else
+            %li
+              %a(href="/users-guide/index")
+                Users Guide
+          - if (requestURI == "/developers-guide/index")
+            %li
+              %span Developers Guide
+          - else
+            %li
+              %a(href="/developers-guide/index")
+                Developers Guide
 
     #content
       .wrapper
