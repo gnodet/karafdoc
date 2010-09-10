@@ -20,11 +20,16 @@
 -->
 
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+
+<!--
   <parent>
     <groupId>org.apache.karaf</groupId>
     <artifactId>karaf</artifactId>
     <version>2.0.1-SNAPSHOT</version>
   </parent>
+  -->
+  <version>2.0.1-SNAPSHOT</version>
+
   <modelVersion>4.0.0</modelVersion>
   
   <groupId>org.fusesource.doc</groupId>
@@ -43,11 +48,13 @@
   </properties>
 
   <dependencies>
+<!--
     <dependency>
       <groupId>javax.servlet</groupId>
       <artifactId>servlet-api</artifactId>
       <scope>provided</scope>
     </dependency>
+-->
     <dependency>
       <groupId>org.fusesource.scalate</groupId>
       <artifactId>scalate-wikitext</artifactId>
@@ -198,6 +205,16 @@
       </plugin>
     </plugins>
   </build>
+
+  <reporting>
+    <plugins>
+      <plugin>
+        <groupId>org.fusesource.scalate</groupId>
+        <artifactId>maven-scalate-plugin</artifactId>
+        <version>${scalate.version}</version>
+      </plugin>
+    </plugins>
+  </reporting>
 
   <profiles>
 	<profile>
