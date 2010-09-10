@@ -149,7 +149,7 @@
 				</goals>
                 <configuration>
                     <format>conf</format>
-                    <targetFolder>${basedir}/target/webapp/</targetFolder>
+                    <targetFolder>${basedir}/target/webapp/commands/</targetFolder>
                 </configuration>
 			</execution>
 		</executions>

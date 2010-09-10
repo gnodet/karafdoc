@@ -47,12 +47,12 @@
     #navigation
       .wrapper
         %ul
-          - if (requestURI == "/")
+          - if (requestURI == "/index")
             %li
               %span Home
           - else
             %li
-              %a(href={uri("/")}) 
+              %a(href={uri("/index")}) 
                 Home
           - if (requestURI == "/users-guide/index")
             %li
