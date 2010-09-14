@@ -47,21 +47,21 @@
     #navigation
       .wrapper
         %ul
-          - if (requestURI == "/index")
+          - if (requestUri == "/index")
             %li
               %span Home
           - else
             %li
               %a(href={uri("/index")}) 
                 Home
-          - if (requestURI == "/users-guide/index")
+          - if (requestUri == "/users-guide/index")
             %li
               %span Users Guide
           - else
             %li
               %a(href="/users-guide/index")
                 Users Guide
-          - if (requestURI == "/developers-guide/index")
+          - if (requestUri == "/developers-guide/index")
             %li
               %span Developers Guide
           - else
