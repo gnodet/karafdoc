@@ -46,6 +46,34 @@
     <scalate.mode>production</scalate.mode>
     <scalate.workdir>${project.build.directory}/scalateWorkDir</scalate.workdir>
   </properties>
+  
+  <repositories>
+    <repository>
+        <id>fusesource</id>
+        <name>Fusesource Maven Repository</name>
+        <url>http://repo.fusesource.com/nexus/content/repositories/snapshots/</url>
+        <releases>
+            <enabled>false</enabled>
+        </releases>
+        <snapshots>
+            <enabled>true</enabled>
+        </snapshots>
+    </repository>
+  </repositories>
+  
+  <pluginRepositories>
+    <pluginRepository>
+        <id>fusesource</id>
+        <name>Fusesource Maven Repository</name>
+        <url>http://repo.fusesource.com/nexus/content/repositories/snapshots/</url>
+        <releases>
+            <enabled>false</enabled>
+        </releases>
+        <snapshots>
+            <enabled>true</enabled>
+        </snapshots>
+    </pluginRepository>
+  </pluginRepositories>
 
   <dependencies>
 <!--
