@@ -17,7 +17,7 @@
 -#
 
 -@ var body: String
--@ var title : String = "FuseSource Karaf Doc"
+-@ var title : String = "Apache Karaf ${pom.version} Guide"
 - response.setContentType("text/html")
 
 -# Only include the console if it's available and the engine is in dev mode.
@@ -29,7 +29,7 @@
     %meta(http-equiv="Content-Type" content="text/html; charset=utf-8")
     %meta(name="description" content="description goes here")
     %meta(name="keywords" content="keywords,goes,here")
-    %meta(name="author" content="Your Name")
+    %meta(name="author" content="The Apache Karaf Team")
 
     - if (include_console)
       = include("/org/fusesource/scalate/console/console_head.scaml")
@@ -46,29 +46,7 @@
   %body
     #navigation
       .wrapper
-        %ul
-          - if (requestUri == "/index")
-            %li
-              %span Home
-          - else
-            %li
-              %a(href={uri("/index")}) 
-                Home
-          - if (requestUri == "/users-guide/index")
-            %li
-              %span Users Guide
-          - else
-            %li
-              %a(href="/users-guide/index")
-                Users Guide
-          - if (requestUri == "/developers-guide/index")
-            %li
-              %span Developers Guide
-          - else
-            %li
-              %a(href="/developers-guide/index")
-                Developers Guide
-
+        = include("/_navigation.ssp")
     #content
       .wrapper
         !~~ body
